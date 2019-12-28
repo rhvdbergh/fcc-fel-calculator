@@ -22,15 +22,20 @@ class Calculator extends React.Component {
   }
 
   calculate(str) {
-    let newStr = str.replace('--', '- -');
-    newStr = newStr.replace('-+', '- +');
-    newStr = newStr.replace('-*', '- *');
-    newStr = newStr.replace('-/', '- /');
+    let newStr = str;
+    // let regex = new RegExp(/[\+\-\*\/][\+\-\*\/][\+\-\*\/]/, 'g');
+    console.log(str);
+    // console.log('regex test', regex.test(newStr));
+    // let newStr = str.replace('--', '- -');
+    // newStr = newStr.replace('-+', '- +');
+    // newStr = newStr.replace('-*', '- *');
+    // newStr = newStr.replace('-/', '- /');
 
     return eval(newStr);
   }
 
   update(btnPressed) {
+    console.log('button:', btnPressed);
     let newDisplay = this.state.display;
     let newDisplayEquation = this.state.displayEquation;
     let newTotal = this.state.total;
@@ -74,13 +79,23 @@ class Calculator extends React.Component {
 
     if ('+*/'.includes(btnPressed)) {
       // if previous entry was an operator (except for -), replace operator
-      if ('+*/'.includes(newDisplayEquation[newDisplayEquation.length - 1])) {
-        newDisplayEquation = newDisplayEquation
-          .split('')
-          .pop(newDisplayEquation.length)
-          .push(btnPressed)
-          .join('');
-        // make sure there are not more than two - operators
+      if ('+-*/'.includes(newDisplayEquation[newDisplayEquation.length - 1])) {
+        // newDisplayEquat1+ion[newDisplayEquation.length - 1] = btnPressed;
+        let arr = newDisplayEquation.split('');
+        arr.pop();
+        arr.push(btnPressed);
+        newDisplayEquation = arr.join('');
+        newDisplay = btnPressed;
+        if (
+          '+-*/'.includes(newDisplayEquation[newDisplayEquation.length - 2])
+        ) {
+          let arr = newDisplayEquation.split('');
+          arr.pop();
+          arr.pop();
+          arr.push(btnPressed);
+          newDisplayEquation = arr.join('');
+          newDisplay = btnPressed;
+        }
       } else {
         newDisplayEquation += btnPressed;
         newDisplay = btnPressed;
@@ -105,8 +120,6 @@ class Calculator extends React.Component {
       total: newTotal,
       operator: newOperator
     });
-
-    console.log(this.state);
   }
 
   handleKeyPress(evt) {
