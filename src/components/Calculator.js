@@ -26,6 +26,7 @@ class Calculator extends React.Component {
       return;
     }
 
+    // if an operand was previously selected, perform
     if (this.state.operator && !'+-*/'.includes(btnPressed)) {
       console.log('previously you selected an operand');
     }
