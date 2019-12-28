@@ -1,0 +1,23 @@
+body,
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+}
+
+#calc_container {
+  width: 700px;
+  height: 450px;
+  background-color: #eb9e39e3;
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+

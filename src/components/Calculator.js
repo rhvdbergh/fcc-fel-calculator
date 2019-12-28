@@ -138,6 +138,11 @@ class Calculator extends React.Component {
   render() {
     return (
       <div id="calc_container">
+        <Display
+          displayId="display_equation"
+          calcState={this.state.displayEquation}
+        />
+        <Display displayId="display" calcState={this.state.display} />
         <Button btnId="equals" btnText="=" />
         <Button btnId="zero" btnText="0" />
         <Button btnId="one" btnText="1" />
@@ -155,11 +160,6 @@ class Calculator extends React.Component {
         <Button btnId="divide" btnText="/" />
         <Button btnId="decimal" btnText="." />
         <Button btnId="clear" btnText="C" />
-        <Display
-          displayId="display_equation"
-          calcState={this.state.displayEquation}
-        />
-        <Display displayId="display" calcState={this.state.display} />
       </div>
     );
   }
