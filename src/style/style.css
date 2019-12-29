@@ -8,8 +8,8 @@ body {
 }
 
 #calc_container {
-  width: 700px;
-  height: 450px;
+  width: 400px;
+  height: 600px;
   background-color: #eb9e39e3;
   text-align: center;
 
@@ -17,4 +17,120 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 6fr 14fr 16fr 16fr 16fr 16fr 16fr;
+  grid-template-areas:
+    'equation equation equation equation'
+    'display display display display'
+    'clear operator-minus operator-multiplication operator-plus'
+    'number1 number2 number3 operator-plus'
+    'number4 number5 number6 operator-division'
+    'number7 number8 number9 decimal-button'
+    'number0 number0 equals equals';
+
+  place-content: stretch stretch;
+  grid-gap: 2px;
+}
+
+.number {
+  background-color: green;
+}
+
+.operator {
+  background-color: mediumseagreen;
+}
+
+.number,
+.operator,
+#display_equation,
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#display_equation {
+  grid-area: equation;
+  /* text-align: right; */
+  /* justify-content: right; */
+}
+
+#display {
+  grid-area: display;
+  text-align: right;
+
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#clear {
+  grid-area: clear;
+  background-color: red;
+}
+
+#decimal {
+  grid-area: decimal-button;
+}
+
+#subtract {
+  grid-area: operator-minus;
+}
+
+#multiply {
+  grid-area: operator-multiplication;
+}
+
+#divide {
+  grid-area: operator-division;
+}
+
+#add {
+  grid-area: operator-plus;
+}
+
+#zero {
+  grid-area: number0;
+}
+
+#one {
+  grid-area: number1;
+}
+
+#two {
+  grid-area: number2;
+}
+
+#three {
+  grid-area: number3;
+}
+
+#four {
+  grid-area: number4;
+}
+
+#five {
+  grid-area: number5;
+}
+
+#six {
+  grid-area: number6;
+}
+
+#seven {
+  grid-area: number7;
+}
+
+#eight {
+  grid-area: number8;
+}
+
+#nine {
+  grid-area: number9;
 }

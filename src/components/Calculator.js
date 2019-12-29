@@ -143,23 +143,23 @@ class Calculator extends React.Component {
           calcState={this.state.displayEquation}
         />
         <Display displayId="display" calcState={this.state.display} />
-        <Button btnId="equals" btnText="=" />
-        <Button btnId="zero" btnText="0" />
-        <Button btnId="one" btnText="1" />
-        <Button btnId="two" btnText="2" />
-        <Button btnId="three" btnText="3" />
-        <Button btnId="four" btnText="4" />
-        <Button btnId="five" btnText="5" />
-        <Button btnId="six" btnText="6" />
-        <Button btnId="seven" btnText="7" />
-        <Button btnId="eight" btnText="8" />
-        <Button btnId="nine" btnText="9" />
-        <Button btnId="add" btnText="+" />
-        <Button btnId="subtract" btnText="-" />
-        <Button btnId="multiply" btnText="*" />
-        <Button btnId="divide" btnText="/" />
-        <Button btnId="decimal" btnText="." />
-        <Button btnId="clear" btnText="C" />
+        <Button btnId="equals" btnClass="operator" btnText="=" />
+        <Button btnId="zero" btnClass="number" btnText="0" />
+        <Button btnId="one" btnClass="number" btnText="1" />
+        <Button btnId="two" btnClass="number" btnText="2" />
+        <Button btnId="three" btnClass="number" btnText="3" />
+        <Button btnId="four" btnClass="number" btnText="4" />
+        <Button btnId="five" btnClass="number" btnText="5" />
+        <Button btnId="six" btnClass="number" btnText="6" />
+        <Button btnId="seven" btnClass="number" btnText="7" />
+        <Button btnId="eight" btnClass="number" btnText="8" />
+        <Button btnId="nine" btnClass="number" btnText="9" />
+        <Button btnId="add" btnClass="operator" btnText="+" />
+        <Button btnId="subtract" btnClass="operator" btnText="-" />
+        <Button btnId="multiply" btnClass="operator" btnText="*" />
+        <Button btnId="divide" btnClass="operator" btnText="/" />
+        <Button btnId="decimal" btnClass="operator" btnText="." />
+        <Button btnId="clear" btnClass="number" btnText="C" />
       </div>
     );
   }

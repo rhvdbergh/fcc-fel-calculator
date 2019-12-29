@@ -9,7 +9,11 @@ const Button = props => {
   //     };
   //   }, []);
 
-  return <div id={props.btnId}>{props.btnText}</div>;
+  return (
+    <div id={props.btnId} className={props.btnClass}>
+      {props.btnText}
+    </div>
+  );
 };
 
 export default Button;
