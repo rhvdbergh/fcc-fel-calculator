@@ -56,11 +56,11 @@ body {
   grid-template-areas:
     'equation equation equation equation'
     'display display display display'
-    'clear operator-minus operator-multiplication operator-plus'
-    'number1 number2 number3 operator-plus'
-    'number4 number5 number6 operator-division'
-    'number7 number8 number9 decimal-button'
-    'number0 number0 equals equals';
+    'clear clear clear operator-plus'
+    'number1 number2 number3 operator-minus'
+    'number4 number5 number6 operator-multiplication'
+    'number7 number8 number9 operator-division'
+    'number0 equals equals decimal-button';
 
   place-content: stretch stretch;
   grid-gap: 2px;
