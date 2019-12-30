@@ -31,6 +31,7 @@ html {
   height: 100%;
   position: relative;
   font-size: 1.3em;
+  box-sizing: border-box;
 }
 
 body {
@@ -200,5 +201,12 @@ body {
   #calc_container {
     max-width: 100%;
     max-height: 80%;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #calc_container {
+    max-width: 100%;
+    max-height: 100%;
   }
 }

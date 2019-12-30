@@ -23,8 +23,8 @@ class Calculator extends React.Component {
     let newStr = str;
     let newNum = eval(newStr);
     newStr = newNum + '';
-    if (newStr.length > 12) {
-      newNum = newNum.toExponential(12);
+    if (newStr.length > 10) {
+      newNum = newNum.toExponential(10);
     }
     return newNum;
   }
