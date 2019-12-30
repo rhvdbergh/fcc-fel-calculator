@@ -44,7 +44,7 @@ body {
   height: 600px;
   background-color: var(--background-color);
   text-align: center;
-  border: 2px solid var(--background-color);
+  border: 5px solid var(--background-color);
 
   position: absolute;
   top: 50%;
