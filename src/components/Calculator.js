@@ -21,12 +21,8 @@ class Calculator extends React.Component {
 
   calculate(str) {
     let newStr = str;
-    let newNum = eval(newStr);
-    newStr = newNum + '';
-    if (newStr.length > 10) {
-      newNum = newNum.toExponential(10);
-    }
-    return newNum;
+
+    return eval(newStr);
   }
 
   update(btnPressed) {
