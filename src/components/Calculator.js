@@ -10,8 +10,7 @@ class Calculator extends React.Component {
     this.state = {
       display: '0',
       displayEquation: '0',
-      total: 0,
-      operator: null
+      growingText: ''
     };
     this.initialState = this.state; // in case of reset by pressing 'C'
 
@@ -29,8 +28,6 @@ class Calculator extends React.Component {
   update(btnPressed) {
     let newDisplay = this.state.display;
     let newDisplayEquation = this.state.displayEquation;
-    let newTotal = this.state.total;
-    let newOperator = this.state.operator;
 
     // pressing C will reset to the initial state
     if (btnPressed.toUpperCase() === 'C') {
@@ -54,8 +51,6 @@ class Calculator extends React.Component {
         newDisplayEquation += btnPressed;
         newDisplay += btnPressed;
       }
-      // set the new total to the same as the display
-      newTotal = parseFloat(newDisplayEquation);
     }
 
     if (btnPressed === '.' && !newDisplay.includes('.')) {
@@ -108,14 +103,11 @@ class Calculator extends React.Component {
     this.setState({
       display: newDisplay,
       displayEquation: newDisplayEquation,
-      total: newTotal,
-      operator: newOperator
+      growingText: btnPressed
     });
   }
 
   handleKeyPress(evt) {
-    console.log(evt);
-
     const buttons = {
       '1': 'one',
       '2': 'two',

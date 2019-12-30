@@ -36,6 +36,7 @@ html {
 body {
   font-family: 'DS-Digital', sans-serif;
   background-color: var(--page-background-color);
+  background-image: url('../../static/floral-763734_640.jpg');
 }
 
 #calc_container {
