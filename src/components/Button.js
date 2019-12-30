@@ -5,7 +5,7 @@ const Button = props => {
     document.getElementById(props.btnId).classList.add('pressed');
     setTimeout(() => {
       document.getElementById(props.btnId).classList.remove('pressed');
-    }, 300);
+    }, 250);
   };
 
   useEffect(() => {
