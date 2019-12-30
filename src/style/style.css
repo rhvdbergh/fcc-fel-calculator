@@ -74,6 +74,16 @@ body {
   background-color: var(--operator-btn-color);
 }
 
+.number:hover,
+.operator:hover {
+  filter: brightness(85%);
+}
+
+.number,
+.operator {
+  transition: all 0.2s ease-in-out;
+}
+
 .number,
 .operator,
 #display_equation,
@@ -81,6 +91,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #display_equation {
@@ -169,4 +180,11 @@ body {
 
 #nine {
   grid-area: number9;
+}
+
+.pressed:hover {
+  filter: brightness(50%);
+}
+.pressed {
+  filter: brightness(50%);
 }

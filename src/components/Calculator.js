@@ -23,19 +23,10 @@ class Calculator extends React.Component {
 
   calculate(str) {
     let newStr = str;
-    // let regex = new RegExp(/[\+\-\*\/][\+\-\*\/][\+\-\*\/]/, 'g');
-    console.log(str);
-    // console.log('regex test', regex.test(newStr));
-    // let newStr = str.replace('--', '- -');
-    // newStr = newStr.replace('-+', '- +');
-    // newStr = newStr.replace('-*', '- *');
-    // newStr = newStr.replace('-/', '- /');
-
     return eval(newStr);
   }
 
   update(btnPressed) {
-    console.log('button:', btnPressed);
     let newDisplay = this.state.display;
     let newDisplayEquation = this.state.displayEquation;
     let newTotal = this.state.total;

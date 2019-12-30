@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react';
 
 const Button = props => {
-  //   useEffect(() => {
-  //     document.addEventListener('click', props.onClick);
+  const onClick = evt => {
+    document.getElementById(props.btnId).classList.add('pressed');
+    setTimeout(() => {
+      document.getElementById(props.btnId).classList.remove('pressed');
+    }, 300);
+  };
 
-  //     return () => {
-  //       document.addEventListener('click', props.onClick);
-  //     };
-  //   }, []);
+  useEffect(() => {
+    document.getElementById(props.btnId).addEventListener('click', onClick);
+
+    return () => {
+      document.getElementById(props.btnId).addEventListener('click', onClick);
+    };
+  }, []);
 
   return (
     <div id={props.btnId} className={props.btnClass}>
