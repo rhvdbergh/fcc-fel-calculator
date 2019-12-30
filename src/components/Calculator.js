@@ -9,8 +9,7 @@ class Calculator extends React.Component {
 
     this.state = {
       display: '0',
-      displayEquation: '0',
-      growingText: ''
+      displayEquation: '0'
     };
     this.initialState = this.state; // in case of reset by pressing 'C'
 
@@ -102,8 +101,7 @@ class Calculator extends React.Component {
 
     this.setState({
       display: newDisplay,
-      displayEquation: newDisplayEquation,
-      growingText: btnPressed
+      displayEquation: newDisplayEquation
     });
   }
 
